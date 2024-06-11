@@ -15,16 +15,11 @@ function App() {
           const fetchedConfig = response.data;
           localStorage.setItem('websiteConfig', JSON.stringify(fetchedConfig));
           setConfig(fetchedConfig);
-          console.log(fetchedConfig,"config");
-
-          
         }
       } catch (error) {
         console.error('Error fetching website config:', error);
       }
     };
-    console.log('LocalStorage after setting config:', localStorage);
-
     fetchConfig();
   }, []);
 
